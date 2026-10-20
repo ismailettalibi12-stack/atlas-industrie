@@ -6,4 +6,4 @@ Local check: `python3 scripts/check_vlans.py` from the repository root.
 'EOF'
 
 Enable the pre-commit hook once after cloning: `git config core.hooksPath hooks`
-EOF
+EOF"# atlas-industrie" 
