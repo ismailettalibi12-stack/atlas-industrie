@@ -1,0 +1,46 @@
+zones:
+  - name: office
+    vlan: 10
+    prefix: 10.40.10.0/24
+    vrf: CORP
+    allowed_to_reach: [datacentre, internet]
+  - name: callcentre
+    vlan: 20
+    prefix: 10.40.20.0/24
+    vrf: CALL
+    allowed_to_reach: [datacentre, voice]
+  - name: voice
+    vlan: 30
+    prefix: 10.40.30.0/24
+    vrf: VOICE
+    allowed_to_reach: [callcentre]
+  - name: warehouse-wifi
+    vlan: 40
+    prefix: 10.40.40.0/24
+    vrf: WIFI
+    allowed_to_reach: [datacentre]
+  - name: warehouse-control
+    vlan: 50
+    prefix: 10.40.50.0/24
+    vrf: CTRL
+    allowed_to_reach: [datacentre]
+  - name: packing
+    vlan: 60
+    prefix: 10.40.60.0/24
+    vrf: PACK
+    allowed_to_reach: [datacentre]
+  - name: guest
+    vlan: 70
+    prefix: 172.16.70.0/24
+    vrf: GUEST
+    allowed_to_reach: [internet]
+  - name: management
+    vlan: 99
+    prefix: 10.40.99.0/24
+    vrf: MGMT
+    allowed_to_reach: [datacentre]
+  - name: datacentre
+    vlan: 100
+    prefix: 10.40.100.0/24
+    vrf: DC
+    allowed_to_reach: []
